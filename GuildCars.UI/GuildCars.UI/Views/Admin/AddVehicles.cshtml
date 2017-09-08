@@ -1,0 +1,115 @@
+﻿@model GuildCars.UI.Models.AddVehicleViewModel
+@{
+    ViewBag.Title = "AddVehicles";
+}
+
+
+    @using (Html.BeginForm("AddedVehicles", "Admin", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row col-lg-12">
+            <h2>AddVehicles</h2>
+            <div class="col-sm-3">
+                <label>Make</label>
+                @Html.DropDownListFor(m => m.Vehicle.MakeId, Model.Makes, new { @class = "form-control", @id = "makeDropDown" })
+
+                <label>Type</label>
+                @Html.DropDownListFor(m => m.Vehicle.IsNew, new SelectList(
+            new List<Object>
+            {
+                new{value = false, text = "New"},
+                new{value = true, text= "Used"}
+            },
+            "value",
+            "text",
+            Model.Vehicle
+           ))
+
+                <label>Year</label>
+                @Html.TextBoxFor(m => m.Vehicle.Year)
+
+                <label>Color</label>
+                @Html.DropDownListFor(m => m.Vehicle.VehicleColorId, Model.InteriorColors, new { @class = "form-control" })
+
+                <label>Mileage</label>
+                @Html.TextBoxFor(m => m.Vehicle.Mileage)
+
+                <label>MSRP</label>
+                @Html.TextBoxFor(m => m.Vehicle.MSRP)
+            </div>
+
+            <div class="col-sm-3 col-sm-offset-1">
+
+                <label>Model</label>
+                @Html.DropDownListFor(m => m.Vehicle.ModelId,
+                    new List<SelectListItem>
+                    {
+                        new SelectListItem{Text="", Value=""}
+                    },
+                    "-Select Model-",
+                    new { @class="form-control", @id="ModelSelectList" })
+
+                <label>Body Style</label>
+                @Html.DropDownListFor(m => m.Vehicle.BodystyleId, Model.BodyStyles, new { @class = "form-control" })
+
+                <label>Transmission</label>
+                @Html.DropDownListFor(m => m.Vehicle.TransmissionId, Model.Transmissions, new { @class = "form-control" })
+
+                <label>Interior</label>
+                @Html.DropDownListFor(m => m.Vehicle.InteriorColorId, Model.ExteriorColors, new { @class = "form-control" })
+
+                <label>Vin #</label>
+                @Html.TextBoxFor(m => m.Vehicle.Vin)
+
+                <label>Sale Price</label>
+                @Html.TextBoxFor(m => m.Vehicle.ActualListedPrice)
+
+                <label>Description</label>
+                @Html.TextAreaFor(m=>m.Vehicle.Description)
+
+                <label>Image</label>
+                <input id="ImageUpload" name="ImageUpload" type="file" class="form-control" />
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+           
+        </div>
+    }
+        
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#makeDropDown").click(function () {
+                GetModels();
+            });
+
+        });
+
+
+        function GetModels() {
+            var id = $('#makeDropDown').val()
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:61267/api/admin/getmodels?id=' + id,
+                dataType: 'json',
+                success: function (data) {
+                    $('#ModelSelectList').empty();
+                    console.log(data);
+
+                    $.each(data, function (index, item) {
+                        var html = $('<option>', { value: item.ModelId, text: item.ModelName });
+
+                        $('#ModelSelectList').append(html);
+
+                    });
+                },
+                error: function () {
+                    console.log(status);
+                }
+            });
+
+        }
+
+    </script>
+}

@@ -1,0 +1,22 @@
+﻿@model List<GuildCars.Models.Tables.Vehicle>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h1>BIG HUGE SALE!!!</h1>
+    <p class="lead">All sales are final.</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-10">
+       @foreach(var vehicle in Model)
+       {
+           <div class="col-sm-3">
+              <img src="@vehicle.ImagePath" class="img-responsive" />
+               <h4 class="center-block">@vehicle.Year  @vehicle.Make  @vehicle.ModelName</h4>
+               <h4 class="center-block center-block">@vehicle.ActualListedPrice</h4>
+           </div>
+       }
+    </div>
+</div>

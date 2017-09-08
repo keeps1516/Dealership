@@ -1,0 +1,60 @@
+﻿@model GuildCars.Models.Tables.Vehicle
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Vehicle Details</h2>
+@using (Html.BeginForm())
+{
+    <div class="col-lg-12">
+        <table>
+            <tbody>
+                <tr>
+                    <td><strong>@Model.Year  @Model.Make  @Model.ModelName</strong></td>
+                </tr>
+                <tr>
+                    <td><img src="@Model.ImagePath"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Trans:</strong></td>
+                    <td>@Model.TransmissionName</td>
+                </tr>
+                <tr>
+                    <td><strong>BodyStyle:</strong></td>
+                    <td>@Model.BodyStyleName</td>
+                </tr>
+                <tr>
+                    <td><strong>Trans:</strong></td>
+                    <td>@Model.TransmissionName</td>
+                </tr>
+                <tr>
+                    <td><strong>Color:</strong></td>
+                    <td>@Model.VehicleColor</td>
+                </tr>
+                <tr>
+                    <td><strong>Interior:</strong></td>
+                    <td>@Model.InteriorColor</td>
+                </tr>
+                <tr>
+                    <td><strong>Milage:</strong></td>
+                    <td>@Model.Mileage</td>
+                </tr>
+                <tr>
+                    <td><strong>Vin:</strong></td>
+                    <td>@Model.Vin</td>
+                </tr>
+                <tr>
+                    <td><strong>Sale Price:</strong></td>
+                    <td>@Model.ActualListedPrice</td>
+                </tr>
+                <tr>
+                    <td><strong>MSRP:</strong></td>
+                    <td>@Model.MSRP</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn-primary"></button>
+
+
+</div>
+}

@@ -1,0 +1,13 @@
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\GuildCars.Test.dll.config
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\GuildCars.Test.dll
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\GuildCars.Test.pdb
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\GuildCars.Data.dll
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\GuildCars.Models.dll
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\nunit.framework.dll
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\GuildCars.Data.pdb
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\GuildCars.Models.pdb
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\bin\Debug\nunit.framework.xml
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\obj\Debug\GuildCars.Test.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\obj\Debug\GuildCars.Test.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\obj\Debug\GuildCars.Test.dll
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Test\obj\Debug\GuildCars.Test.pdb

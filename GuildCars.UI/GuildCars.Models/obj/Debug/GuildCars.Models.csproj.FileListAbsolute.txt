@@ -1,0 +1,5 @@
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Models\bin\Debug\GuildCars.Models.dll
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Models\bin\Debug\GuildCars.Models.pdb
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Models\obj\Debug\GuildCars.Models.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Models\obj\Debug\GuildCars.Models.dll
+\\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Models\obj\Debug\GuildCars.Models.pdb
