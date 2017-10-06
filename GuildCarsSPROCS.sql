@@ -385,9 +385,21 @@ begin
 	end
 	go
 create procedure AddVehicle(
-@ModelId int,@TransmissionId int, @BodyStyleId int,
-@InteriorColorId int, @ColorId int,@Mileage decimal(7,2), @Vin varchar(17), @MinumSalePrice decimal(9,2), 
-@ActualListedPrice decimal (9,2), @MSRP decimal (9,2), @IsNew bit, @IsFeatured bit, @Year int, @ImagePath varchar(150), @Description varchar(250)
+@ModelId int,
+@TransmissionId int, 
+@BodyStyleId int,
+@InteriorColorId int,
+@ColorId int,
+@Mileage decimal(7,2), 
+@Vin varchar(17), 
+@MinumSalePrice decimal(9,2), 
+@ActualListedPrice decimal (9,2), 
+@MSRP decimal (9,2), 
+@IsNew bit, 
+@IsFeatured bit, 
+@Year int, 
+@ImagePath varchar(150), 
+@Description varchar(250)
 )
 as
 
@@ -446,4 +458,71 @@ create procedure GetAllTransmissionTypes
 as
 select *
 from Transmission
+go
+
+if exists(
+	select *
+	from INFORMATION_SCHEMA.ROUTINES
+	where ROUTINE_NAME = 'UpdateVehicle')
+begin
+	drop procedure UpdateVehicle
+	end
+	go
+
+create procedure UpdateVehicle(
+@VehicleId int,
+@ModelId int,
+@TransmissionId int, 
+@BodyStyleId int,
+@InteriorColorId int, 
+@ColorId int,
+@Mileage decimal(7,2), 
+@Vin varchar(17), 
+@MinumSalePrice decimal(9,2), 
+@ActualListedPrice decimal (9,2), 
+@MSRP decimal (9,2), 
+@IsNew bit, 
+@IsFeatured bit, 
+@Year int, 
+@ImagePath varchar(150), 
+@Description varchar(250)
+)
+as
+begin
+	update Vehicle set
+		ModelId = @ModelId,
+		TransmissionId = @TransmissionId,
+		BodyStyleId = @BodyStyleId,
+		InteriorColorId = @InteriorColorId,
+		ColorId = @ColorId,
+		Vin = @Vin,
+		MinumSalePrice = @MinumSalePrice,
+		ActualListedPrice = @ActualListedPrice,
+		MSRP = @MSRP,
+		IsNew = @IsNew,
+		IsFeatured = @IsFeatured,
+		[Year] = @Year,
+		ImagePath = @ImagePath,
+		[Description] = @Description
+		where VehicleId = @VehicleId
+end
+go
+
+if exists(
+	select *
+	from INFORMATION_SCHEMA.ROUTINES
+	where ROUTINE_NAME = 'DeleteVehicle')
+begin
+	drop procedure DeleteVehicle
+	end
+	go
+
+create procedure DeleteVehicle(
+@VehicleId int
+)
+as
+begin
+	delete Vehicle
+	where Vehicle.VehicleId = @VehicleId
+end
 go

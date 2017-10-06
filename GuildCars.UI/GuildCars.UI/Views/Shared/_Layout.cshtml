@@ -30,7 +30,7 @@
                     {
                         if (User.IsInRole("admin"))
                         {
-                           <li> @Html.ActionLink("Add Vehicles","Admin", "Admin")</li>
+                           <li> @Html.ActionLink("Add Vehicles", "AddVehicles", "Admin")</li>
                         }
                         if(User.IsInRole("sales"))
                         {

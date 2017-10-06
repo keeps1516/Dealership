@@ -6,3 +6,11 @@
 \\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Data\obj\Debug\GuildCars.Data.csproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Data\obj\Debug\GuildCars.Data.dll
 \\Mac\Home\Documents\Bitbucket\kris-keepers-indivdual-work\Guild Cars\GuildCars.UI\GuildCars.Data\obj\Debug\GuildCars.Data.pdb
+\\Mac\Home\Documents\Repository\Guild Cars\GuildCarsRepo\GuildCars.UI\GuildCars.Data\bin\Debug\GuildCars.Data.dll
+\\Mac\Home\Documents\Repository\Guild Cars\GuildCarsRepo\GuildCars.UI\GuildCars.Data\bin\Debug\GuildCars.Data.pdb
+\\Mac\Home\Documents\Repository\Guild Cars\GuildCarsRepo\GuildCars.UI\GuildCars.Data\bin\Debug\GuildCars.Models.dll
+\\Mac\Home\Documents\Repository\Guild Cars\GuildCarsRepo\GuildCars.UI\GuildCars.Data\bin\Debug\GuildCars.Models.pdb
+\\Mac\Home\Documents\Repository\Guild Cars\GuildCarsRepo\GuildCars.UI\GuildCars.Data\obj\Debug\GuildCars.Data.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Repository\Guild Cars\GuildCarsRepo\GuildCars.UI\GuildCars.Data\obj\Debug\GuildCars.Data.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Repository\Guild Cars\GuildCarsRepo\GuildCars.UI\GuildCars.Data\obj\Debug\GuildCars.Data.dll
+\\Mac\Home\Documents\Repository\Guild Cars\GuildCarsRepo\GuildCars.UI\GuildCars.Data\obj\Debug\GuildCars.Data.pdb

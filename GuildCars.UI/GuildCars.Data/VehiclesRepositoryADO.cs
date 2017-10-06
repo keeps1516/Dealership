@@ -597,5 +597,86 @@ namespace GuildCars.Data
             }
 
         }
+
+        public void UpdateVehicle (Vehicle v)
+        {
+            using (SqlConnection cnn = new SqlConnection(Settings.GetConnectionString()))
+            {
+                cnn.ConnectionString = Settings.GetConnectionString();
+                
+                SqlCommand cmd = new SqlCommand("UpdateVehicle", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@VehicleId", v.VehicleId);
+                cmd.Parameters.AddWithValue("@ModelId", v.ModelId);
+                cmd.Parameters.AddWithValue("@TransmissionId", v.TransmissionId);
+                cmd.Parameters.AddWithValue("@BodyStyleId", v.BodystyleId);
+                cmd.Parameters.AddWithValue("@InteriorColorId", v.InteriorColorId);
+                cmd.Parameters.AddWithValue("@ColorId", v.VehicleColorId);
+                cmd.Parameters.AddWithValue("@Mileage", v.Mileage);
+                cmd.Parameters.AddWithValue("@Vin",v.Vin);
+                cmd.Parameters.AddWithValue("@MinumSalePrice", v.MinumSalePrice);
+                cmd.Parameters.AddWithValue("@ActualListedPrice", v.ActualListedPrice);
+                cmd.Parameters.AddWithValue("@MSRP", v.MSRP);
+                cmd.Parameters.AddWithValue("@IsNew", v.IsNew);
+                cmd.Parameters.AddWithValue("@IsFeatured", v.IsFeatured);
+                cmd.Parameters.AddWithValue("@Year", v.Year);
+                cmd.Parameters.AddWithValue("@ImagePath", v.ImagePath);
+                cmd.Parameters.AddWithValue("@Description", v.Description);
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                
+
+            }
+        }
+
+        public void DeleteVehicle(int VehicleId)
+        {
+            using (var cnn = new SqlConnection(Settings.GetConnectionString()))
+            {
+                var cmd = new SqlCommand("DeleteVehicle", cnn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@VehicleId", VehicleId);
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+        /// <summary>
+        /// Need SQL Sprocs for the last 2
+        /// </summary>
+        public void AddMake (string makeName)
+        {
+            using (var cnn = new SqlConnection(Settings.GetConnectionString()))
+            {
+                var cmd = new SqlCommand("AddMake",cnn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@MakeName", makeName);
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+        public void AddModel(Model model)
+        {
+            using (var cnn = new SqlConnection(Settings.GetConnectionString()))
+            {
+                var cmd = new SqlCommand("AddModel", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@MakeId", model.MakeId);
+                cmd.Parameters.AddWithValue("@ModelName", model.ModelName);
+
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+            
+            }
+        }
     }
 }
